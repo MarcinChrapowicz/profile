@@ -60,7 +60,7 @@ internal class UserProfileViewModelTest {
 
         verifySequence {
             view.hasState(UIState.Empty)
-            view.hasEvent(UserProfileEvent.Loading)
+            view.hasState(UserProfileState.Loading)
             view.hasState(user.mapToUserState())
         }
     }
@@ -73,7 +73,7 @@ internal class UserProfileViewModelTest {
 
         verifySequence {
             view.hasState(UIState.Empty)
-            view.hasEvent(UserProfileEvent.Loading)
+            view.hasState(UserProfileState.Loading)
             view.hasEvent(UserProfileEvent.RetryView)
         }
     }
@@ -86,7 +86,7 @@ internal class UserProfileViewModelTest {
 
         verifySequence {
             view.hasState(UIState.Empty)
-            view.hasEvent(UserProfileEvent.Loading)
+            view.hasState(UserProfileState.Loading)
             view.hasEvent(UserProfileEvent.RetryView)
         }
     }
@@ -100,9 +100,9 @@ internal class UserProfileViewModelTest {
 
         verifySequence {
             view.hasState(UIState.Empty)
-            view.hasEvent(UserProfileEvent.Loading)
+            view.hasState(UserProfileState.Loading)
             view.hasState(user.mapToUserState())
-            view.hasState(UserProfileState("name", "email", "123"))
+            view.hasState(UserProfileState.Loaded("name", "email", "123"))
         }
     }
 
