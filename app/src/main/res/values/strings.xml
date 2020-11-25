@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="retry_action">Retry</string>
+
+    <string name="user_name_hint">Name</string>
+    <string name="user_email_hint">Email</string>
+    <string name="user_mobile_number_hint">Mobile Number</string>
+    <string name="user_update_user">Update user</string>
+</resources>

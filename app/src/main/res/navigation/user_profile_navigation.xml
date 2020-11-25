@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/user_profile_navigator"
+    app:startDestination="@id/profile">
+
+    <fragment
+        android:id="@+id/profile"
+        android:name="marcinchrapowicz.application.user.ui.profile.UserProfileFragment"
+        tools:layout="@layout/fragment_user_profile">
+        <action
+            android:id="@+id/action_backup_card_to_backup_card_error"
+            app:destination="@id/profile_error"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/profile_error"
+        android:name="marcinchrapowicz.application.user.ui.error.ErrorFragment"
+        tools:layout="@layout/fragment_error">
+
+        <action
+            android:id="@+id/action_backup_card_error_to_backup_card"
+            app:destination="@id/profile"/>
+    </fragment>
+
+</navigation>
